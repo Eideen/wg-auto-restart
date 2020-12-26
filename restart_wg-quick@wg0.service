@@ -1,0 +1,8 @@
+[Unit]
+Description=watchdog for wg-quick@wg0 restart
+After=network-online.target
+[Service]
+Restart=on-failure
+ExecStart=/home/torstein/restart_wg-quick@wg0.sh
+[Install]
+WantedBy=multi-user.target
